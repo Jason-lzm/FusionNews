@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llBottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/ivIconHome"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tabbar_home_selector"
+            />
+
+        <TextView
+            android:id="@+id/tvTextHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivIconHome"
+            android:layout_centerHorizontal="true"
+            android:textColor="?attr/tabTextColor"
+            android:text="主页"
+            android:textSize="11sp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/ivIconVideo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tabbar_video_selector"
+            />
+
+        <TextView
+            android:id="@+id/tvTextVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivIconVideo"
+            android:layout_centerHorizontal="true"
+            android:textColor="?attr/tabTextColor"
+            android:text="@string/video"
+            android:textSize="11sp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/ivIconAttention"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tabbar_care_selector"
+            />
+
+        <TextView
+            android:id="@+id/tvTextAttention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivIconAttention"
+            android:layout_centerHorizontal="true"
+            android:textColor="?attr/tabTextColor"
+            android:text="@string/photo"
+            android:textSize="11sp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/ivIconMe"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tabbar_me_selector"
+            />
+
+        <TextView
+            android:id="@+id/tvTextMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivIconMe"
+            android:layout_centerHorizontal="true"
+            android:textColor="?attr/tabTextColor"
+            android:text="@string/me"
+            android:textSize="11sp"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

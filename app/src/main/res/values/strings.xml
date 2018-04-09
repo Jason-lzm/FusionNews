@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FusionNews</string>
+    <string name="channel_manage">频道管理</string>
+
+    <string name="news">新闻</string>
+
+    <!-- tab名称 -->
+    <string name="home">主页</string>
+    <string name="video">视频</string>
+    <string name="photo">图片</string>
+    <string name="me">我的</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
