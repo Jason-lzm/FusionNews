@@ -20,12 +20,14 @@ public class PhotoFragment extends BaseFragment {
         // Required empty public constructor
     }
 
+    @Override
+    protected int getLayoutResources() {
+        return R.layout.fragment_photo;
+    }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_photo, container, false);
+    protected void initView(View view, Bundle savedInstanceState) {
+
     }
 
 }

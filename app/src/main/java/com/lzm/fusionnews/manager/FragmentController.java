@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 
-import com.lzm.fusionnews.module.home.ui.fragment.HomeFragment;
+import com.lzm.fusionnews.module.home.ui.HomeFragment;
 import com.lzm.fusionnews.module.me.ui.MeFragment;
 import com.lzm.fusionnews.module.photo.ui.PhotoFragment;
 import com.lzm.fusionnews.module.video.ui.VideoFragment;
