@@ -31,6 +31,7 @@
     <!-- 配色3 -->
     <color name="scarlet">#fff85959</color>
     <color name="gray">#ff999999</color>
+    <color name="transparent">#00000000</color>
 
     <color name="material_amber_100">#ffecb3</color>
     <color name="material_amber_200">#ffe082</color>

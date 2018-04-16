@@ -41,7 +41,8 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHodler
         final ContentListItem bean = mDataList.get(position);
         holder.tv_title.setText(bean.title);
         holder.tv_desc.setText(bean.forward);
-        holder.tv_like.setText(bean.likeCount + "");
+        holder.tv_like.setText("喜欢 " + bean.likeCount);
+        holder.sv_photo.setImageURI(bean.imgUrl);
         holder.tv_time.setText(bean.postDate.substring(5, 10));
         holder.cv_root.setOnClickListener(new View.OnClickListener() {
             @Override

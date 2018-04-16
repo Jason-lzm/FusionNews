@@ -36,6 +36,7 @@ public class ContentListItem {
     public String adPvurl;
     public String adShareCnt;
     public String adLinkurl;
+    @SerializedName("img_url")
     public String imgUrl;
     @SerializedName("post_date")
     public String postDate;
