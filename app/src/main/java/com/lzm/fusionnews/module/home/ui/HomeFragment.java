@@ -55,7 +55,7 @@ public class HomeFragment extends BaseFragment implements HomeContract.View, Swi
                 int lastPositon = layoutManager.findLastVisibleItemPosition();
                 if (newState == RecyclerView.SCROLL_STATE_IDLE && lastPositon == mData.size() - 1) {
                     if (mIndex < 10) {
-                        mPresenter.loadMore(mIndex);
+                        mPresenter.loadMore(mIndex + 1);
                     }
                 }
             }
@@ -108,7 +108,7 @@ public class HomeFragment extends BaseFragment implements HomeContract.View, Swi
 
     @Override
     public void onRefresh() {
-        if(mIsRefresh){
+        if(!mIsRefresh){
             mIsRefresh = true;
             mPresenter.start();
         }
