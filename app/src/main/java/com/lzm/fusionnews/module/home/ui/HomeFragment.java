@@ -1,7 +1,6 @@
 package com.lzm.fusionnews.module.home.ui;
 
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,8 +9,9 @@ import android.support.v7.widget.RecyclerView;
 
 import com.lzm.fusionnews.R;
 import com.lzm.fusionnews.base.BaseFragment;
+import com.lzm.fusionnews.common.Constants;
 import com.lzm.fusionnews.module.home.HomeContract;
-import com.lzm.fusionnews.module.home.model.ArticleResult;
+import com.lzm.fusionnews.module.home.model.ArticleListBean;
 import com.lzm.fusionnews.module.home.model.ContentListItem;
 
 import java.util.ArrayList;
@@ -73,7 +73,7 @@ public class HomeFragment extends BaseFragment implements HomeContract.View, Swi
     }
 
     @Override
-    public void updateHomeList(ArticleResult articleResult) {
+    public void updateHomeList(ArticleListBean articleListBean) {
         if(mIsRefresh){
             mIsRefresh = false;
             refreshLayout.setRefreshing(false);
@@ -85,8 +85,8 @@ public class HomeFragment extends BaseFragment implements HomeContract.View, Swi
             mIndex += 1;
         }
 
-        for(ContentListItem item : articleResult.data.contentList){
-            if(item.category != "0") {
+        for(ContentListItem item : articleListBean.data.contentList){
+            if (!Constants.CATEGORY_PHOTO.equals(item.category)) {//不显示摄影类文章
                 mData.add(item);
             }
         }

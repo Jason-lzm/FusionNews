@@ -34,7 +34,7 @@ public abstract class NetCallback<T> implements Callback {
     public void onResponse(Call call, Response response) throws IOException {
         if(response.isSuccessful()){
             String resbody = response.body().string();
-            Timber.i("request success, response:" + resbody);
+            Timber.d("request success, response:" + resbody);
             T result = JsonUtil.fromJson(resbody, mClass);
             Message msg = Message.obtain();
             msg.what = MSG_CALLBACK_SUCCESSFUL;

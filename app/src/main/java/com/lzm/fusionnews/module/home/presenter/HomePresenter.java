@@ -2,28 +2,25 @@ package com.lzm.fusionnews.module.home.presenter;
 
 import com.lzm.fusionnews.module.home.HomeContract;
 import com.lzm.fusionnews.module.home.model.ArticleModel;
-import com.lzm.fusionnews.module.home.model.ArticleResult;
+import com.lzm.fusionnews.module.home.model.ArticleListBean;
 import com.lzm.fusionnews.module.home.model.IdListBean;
 import com.lzm.fusionnews.net.NetCallback;
 
 import java.io.IOException;
 import java.util.List;
 
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.Response;
 import timber.log.Timber;
 
 /**
  * Created by lzm on 2018/4/14.
  */
 
-public class HomePresent implements HomeContract.Presenter {
+public class HomePresenter implements HomeContract.Presenter {
 
     private HomeContract.View mView;
     private ArticleModel model;
     private List<String> mData;
-    public HomePresent(HomeContract.View view) {
+    public HomePresenter(HomeContract.View view) {
         mView = view;
         view.setPresenter(this);
         model = new ArticleModel();
@@ -61,9 +58,9 @@ public class HomePresent implements HomeContract.Presenter {
 
     @Override
     public void loadList(String data) {
-        model.getArticleList(data, new NetCallback<ArticleResult>(ArticleResult.class) {
+        model.getArticleList(data, new NetCallback<ArticleListBean>(ArticleListBean.class) {
             @Override
-            public void onSuccess(ArticleResult result) {
+            public void onSuccess(ArticleListBean result) {
                 mView.updateHomeList(result);
             }
 

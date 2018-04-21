@@ -8,7 +8,12 @@ import android.view.Menu;
 import com.lzm.fusionnews.R;
 import com.lzm.fusionnews.annotation.ActivityFragmentAnnotation;
 
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity<T extends BasePresenter> extends AppCompatActivity {
+
+    /**
+     * 将代理类通用行为抽出来
+     */
+    protected T mPresenter;
 
     /**
      * 布局资源id

@@ -11,6 +11,8 @@ import okhttp3.Callback;
  */
 
 public class ArticleModel {
+    //文章Base URL
+    String BASE_URL = Api.BASE_ARTICLE_URL;
     //获取最新 idlist, 以获取今日或往日的 onelist 信息
     String IDLIST_URL = "onelist/idlist/?channel=wdj&version=4.0.2&uuid=ffffffff-a90e-706a-63f7-ccf973aae5ee&platform=android";
     //获取 onelist,其中data替换成上面的idlist中的数据，代表最近一周的某一天
@@ -33,14 +35,35 @@ public class ArticleModel {
     }
 
     public void getIdList(Callback callback){
-        String url = Api.BASE_ARTICLE_URL + IDLIST_URL;
+        String url = BASE_URL + IDLIST_URL;
         RequestParams requestParams = new RequestParams.Builder().setUrl(url).build();
         requestManager.getAsync(requestParams, callback);
     }
 
     public void getArticleList(String data, Callback callback){
-        String url = Api.BASE_ARTICLE_URL + ONELIST_URL.replace("data", data);
+        String url = BASE_URL + ONELIST_URL.replace("data", data);
         RequestParams requestParams = new RequestParams.Builder().setUrl(url).build();
         requestManager.getAsync(requestParams, callback);
     }
+
+    public void getArticleDetail(String item_id, Callback callback){
+        String url = BASE_URL + DETAIL_URL.replace("item_id", item_id);
+        RequestParams requestParams = new RequestParams.Builder().setUrl(url).build();
+        requestManager.getAsync(requestParams, callback);
+    }
+
+    public void getSerialDetail(String item_id, Callback callback){
+        String url = BASE_URL + DETAIL_URL.replace("item_id", item_id);
+        url = url.replace(ESSAY, SERIAL);
+        RequestParams requestParams = new RequestParams.Builder().setUrl(url).build();
+        requestManager.getAsync(requestParams, callback);
+    }
+
+    public void getQuestionDetail(String item_id, Callback callback){
+        String url = BASE_URL + DETAIL_URL.replace("item_id", item_id);
+        url = url.replace(ESSAY, QUESTION);
+        RequestParams requestParams = new RequestParams.Builder().setUrl(url).build();
+        requestManager.getAsync(requestParams, callback);
+    }
+
 }

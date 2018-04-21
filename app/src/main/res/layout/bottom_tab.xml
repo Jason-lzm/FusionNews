@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/ivIconHome"
             android:layout_centerHorizontal="true"
-            android:textColor="?attr/tabTextColor"
+            android:textColor="@color/text_selector"
             android:text="主页"
             android:textSize="11sp"
             />
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/ivIconVideo"
             android:layout_centerHorizontal="true"
-            android:textColor="?attr/tabTextColor"
+            android:textColor="@color/text_selector"
             android:text="@string/video"
             android:textSize="11sp"
             />
@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/ivIconAttention"
             android:layout_centerHorizontal="true"
-            android:textColor="?attr/tabTextColor"
+            android:textColor="@color/text_selector"
             android:text="@string/photo"
             android:textSize="11sp"
             />
@@ -105,7 +105,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/ivIconMe"
             android:layout_centerHorizontal="true"
-            android:textColor="?attr/tabTextColor"
+            android:textColor="@color/text_selector"
             android:text="@string/me"
             android:textSize="11sp"
             />
